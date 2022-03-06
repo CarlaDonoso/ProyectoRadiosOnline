@@ -1,0 +1,138 @@
+.hero {
+    background-image: url('./assets/musica.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+  }
+  
+  .gradient {
+    background-image: linear-gradient(45deg, #406882, #b1d0e0);
+  }
+  
+  .trends-item {
+    overflow: hidden;
+  }
+  
+  .trends-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+  
+  .trends-item img:hover {
+    transform: scale(1.3);
+  }
+  
+  .popular {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+  
+  .popular-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    margin-top: 40px;
+  }
+  
+  .popular-grid img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: 0.3s transform ease;
+  }
+  
+  .popular-grid img:hover:nth-child(odd) {
+    transform: translate(10px, -10px);
+  }
+  
+  .popular-grid img:hover:nth-child(even) {
+    /* horizontal, vertical */
+    transform: translate(-10px, -10px);
+  }
+  
+  .popular__title {
+    text-align: center;
+    color: gray;
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    margin-top: 80px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* estrategia mobile last */
+  @media (max-width: 768px) {
+    body {
+      font-size: 150%;
+    }
+  
+    .trends {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .trends__item--big {
+      grid-column: 1 / 3;
+      padding: 20px 0;
+    }
+  
+    .trends__item {
+      width: 100%;
+    }
+  
+    .popular-grid {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 15px;
+    }
+  
+    .popular-grid img:hover:nth-child(odd),
+    .popular-grid img:hover:nth-child(even) {
+      transform: none;
+    }
+  
+    .popular-grid img {
+      transition: 0.3s padding ease;
+    }
+  
+    .popular-grid img:active {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 490px) {
+    .header-container nav {
+      display: none;
+    }
+  
+    .header-container span {
+      display: inline-block;
+    }
+  }
+  
+  @media (max-width: 420px) {
+    body {
+      font-size: 130%;
+    }
+  
+    .trends {
+      grid-template-columns: 1fr;
+    }
+  
+    .trends__item--big {
+      grid-column: 1 / 2;
+      text-align: center;
+    }
+  
+    .popular-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  
